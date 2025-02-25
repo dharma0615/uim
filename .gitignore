@@ -13,3 +13,6 @@
 # Ignore logs and temp files
 *.log
 *.tmp
+
+# Ignore test output folder
+test-output/
