@@ -11,21 +11,11 @@ import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-public class MobileCalaculator {
+public class LaptopCalaculator {
 	int val1 = 10;
 	int val2 = 20;
 
 	String className = this.getClass().getSimpleName();
-	
-	@BeforeSuite
-    public void beforeSuite() {
-        System.out.println("Before Suite - Runs once before all tests");
-    }
-
-    @AfterSuite
-    public void afterSuite() {
-        System.out.println("After Suite - Runs once after all tests");
-    }
 
 	@BeforeClass
 	public void beforeClass() {
@@ -36,20 +26,7 @@ public class MobileCalaculator {
 	public void afterClass() {
 		System.out.println(className+ "After Class - Runs after test methods in this class");
 	}
-
-	@Test(groups = "smoke", priority=1)
-	public void addition() {
-		int val3 = this.val1 + this.val2;
-		System.out.println("MobileCalaculator Addition: " + (val3));
-		Assert.assertEquals(val3, 30);
-	}
-
-	@Test(groups = "regression", priority=2)
-	public void subtraction() {
-		int val3 = this.val1 - this.val2;
-		System.out.println("MobileCalaculator Subtraction: " + (val3));
-		Assert.assertEquals(val3, -10);
-	}
+	
 
 	@BeforeTest
 	public void mobiCalBeforeTest() {
@@ -71,17 +48,31 @@ public class MobileCalaculator {
 		System.out.println("After Method - This is a method from the class to running after method  " + className);
 	}
 
+	@Test(groups = "smoke", priority=1)
+	public void addition() {
+		int val3 = this.val1 + this.val2;
+		System.out.println("LaptopCalaculator Addition: " + (val3));
+		Assert.assertEquals(val3, 30);
+	}
+
+	@Test(groups = "regression", priority=2)
+	public void subtraction() {
+		int val3 = this.val1 - this.val2;
+		System.out.println("LaptopCalaculator Subtraction: " + (val3));
+		Assert.assertEquals(val3, -10);
+	}
+
 	@Test(groups = "retest", priority=0)
 	public void division() {
 		int val3 = this.val1 / this.val2;
-		System.out.println("MobileCalaculator division: " + (val3));
+		System.out.println("LaptopCalaculator division: " + (val3));
 		Assert.assertEquals(val3, 0);
 	}
 
 	@Test(groups = "smoke", priority=3)
 	public void multiplication() {
 		int val3 = this.val1 * this.val2;
-		System.out.println("MobileCalaculator multiplication: " + (val3));
+		System.out.println("LaptopCalaculator multiplication: " + (val3));
 		Assert.assertEquals(val3, 200);
 	}
 
