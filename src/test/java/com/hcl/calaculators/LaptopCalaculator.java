@@ -15,20 +15,18 @@ public class LaptopCalaculator {
 	int val1 = 10;
 	int val2 = 20;
 	
-	int a;
-	int b;
-
 	String className = this.getClass().getSimpleName();
 	
-
 	@BeforeClass
 	public void beforeClass() {
 		
-		a= Integer.valueOf(System.getProperty("jval1"));
-		b= Integer.valueOf(System.getProperty("jval2"));
-		
-		System.out.println("Jenkins Value : "+a);
-		System.out.println("Jenkins Value : "+b);
+
+//		int a= Integer.valueOf(System.getProperty("jval1"));
+//		int b= Integer.valueOf(System.getProperty("jval2"));
+//		String pNamec= System.getProperty("projectName");
+//		System.out.println("Jenkins Value : "+a);
+//		System.out.println("Jenkins Value : "+b);
+//		System.out.println("Jenkins Value : "+pNamec);
 		
 		System.out.println(className+ "Before Class - Runs before test methods in this class");
 	}
