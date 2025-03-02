@@ -37,14 +37,14 @@ public class MobileCalaculator {
 		System.out.println(className+ "After Class - Runs after test methods in this class");
 	}
 
-	@Test(groups = "smoke", priority=1)
+	@Test(groups = {"smoke", "sanity"}, priority=1, alwaysRun=true)
 	public void addition() {
 		int val3 = this.val1 + this.val2;
 		System.out.println("MobileCalaculator Addition: " + (val3));
 		Assert.assertEquals(val3, 30);
 	}
 
-	@Test(groups = "regression", priority=2)
+	@Test(groups = "regression", priority=2, alwaysRun=true)
 	public void subtraction() {
 		int val3 = this.val1 - this.val2;
 		System.out.println("MobileCalaculator Subtraction: " + (val3));

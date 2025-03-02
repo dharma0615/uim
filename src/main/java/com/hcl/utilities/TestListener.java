@@ -65,6 +65,7 @@ public class TestListener implements ITestListener {
 		String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
 		String screenshotPath = System.getProperty("user.dir") + "/test-output/screenshots/" + methodName + "_"
 				+ timestamp + ".png";
+		System.out.println(screenshotPath);
 		File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		File destFile = new File(screenshotPath);
 
