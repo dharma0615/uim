@@ -1,0 +1,36 @@
+<suite name="testngclass1suite" >
+<parameter name="browser" value="chrome"/>
+<test name="testngclass1test" >
+
+<groups>
+<run>
+<include name="regression" />
+</run>
+</groups>
+
+<classes>
+<class name="com.hcl.calaculators.TestNGClass1" />
+<methods>
+<include name=".*Test.*" />
+<exclude name="Test2"/>
+</methods>
+
+</classes>
+
+</test>
+<test name="metagroupsTest">
+
+<groups>
+<define name="all">
+<include name="threadTest" />
+<include name="smoke" />
+</define>
+<run>
+<include name="all" />
+</run>
+</groups>
+<classes>
+<class name="com.hcl.calaculators.TestNGClass1" />
+</classes>
+</test>
+</suite>

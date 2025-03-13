@@ -1,0 +1,16 @@
+<suite name="Parallel">
+	<listeners>
+		<listener class-name="com.hcl.utilities.TestListener" />
+	</listeners>
+	<test name="ParallelTest" thread-count="3">
+		<groups>
+			<run>
+				<inclde name="invalid" />
+			</run>
+		</groups>
+		<classes>
+			<class name="com.hcl.logintests.PageLoginTest" />
+		</classes>
+	</test>
+</suite>
+
