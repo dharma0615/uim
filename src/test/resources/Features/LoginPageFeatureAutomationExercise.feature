@@ -3,6 +3,9 @@ Feature: Login Page Validation
   Background: 
     Given Acces the application
 
+#Version 1.0
+#Updated on: 19th Apr 2025
+#Change: Testdata updated in the Examples
   @loginpage
   Scenario Outline: Login Page Testing with multiple Valid Data
     When Login with username "<username>" and password "<password>" to an app
