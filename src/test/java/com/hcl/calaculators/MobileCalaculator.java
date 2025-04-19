@@ -1,5 +1,7 @@
 package com.hcl.calaculators;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
@@ -16,10 +18,12 @@ public class MobileCalaculator {
 	int val2 = 20;
 
 	String className = this.getClass().getSimpleName();
+	private static final Logger logger = LogManager.getLogger(MobileCalaculator.class);
 	
 	@BeforeSuite
     public void beforeSuite() {
         System.out.println("Before Suite - Runs once before all tests");
+        logger.info("Before Suite - Runs once before all tests");
     }
 
     @AfterSuite
