@@ -1,4 +1,4 @@
-#dharma br code - update
+#dharma br code
 Feature: Login Page Validation
 
 Background: 
