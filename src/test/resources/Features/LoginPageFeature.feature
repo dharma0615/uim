@@ -1,4 +1,3 @@
-#Delete this after testing-2 - edit
 Feature: Login Page Validation
 
 Background: 
