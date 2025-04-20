@@ -17,7 +17,7 @@ public class BaseHooks {
 		driver=new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		System.out.println("Driver is initilized && Browser is launched");
+		System.out.println("Driver is initialized && Browser is launched");
 		
 		
 	}
@@ -28,8 +28,7 @@ public class BaseHooks {
 		if(driver!=null) {
 			driver.quit();
 		}
-		
-		System.out.println("Driver is terminated");
+		System.out.println("Driver session is terminated");
 		
 	}
 
